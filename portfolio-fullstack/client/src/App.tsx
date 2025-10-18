@@ -1,26 +1,30 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Home from './pages/Home';
-import Projects from './pages/Projects';
-import About from './pages/About';
-import ContactForm from './components/ContactForm';
-import HeroSection from './components/HeroSection';
-import './styles/global.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { ThemeProvider } from './context/ThemeContext'
+import Navbar from './components/Navbar'
+import Footer from './components/Footer'
+import Home from './pages/Home'
+import Projects from './pages/Projects'
+import About from './pages/About'
+import './styles/global.css'
 
-const App: React.FC = () => {
+function App() {
   return (
-    <Router>
-      <div>
-        <HeroSection />
-        <Switch>
-          <Route path="/" exact component={Home} />
-          <Route path="/projects" component={Projects} />
-          <Route path="/about" component={About} />
-          <Route path="/contact" component={ContactForm} />
-        </Switch>
-      </div>
-    </Router>
-  );
-};
+    <ThemeProvider>
+      <Router>
+        <div className="bg-police-dark min-h-screen flex flex-col">
+          <Navbar />
+          <main className="flex-grow">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/projects" element={<Projects />} />
+              <Route path="/about" element={<About />} />
+            </Routes>
+          </main>
+          <Footer />
+        </div>
+      </Router>
+    </ThemeProvider>
+  )
+}
 
-export default App;
+export default App

@@ -1,73 +1,137 @@
-import { useState } from 'react';
+import { useState, ChangeEvent, FormEvent } from 'react'
+import type { ContactFormData } from '../types'
 
-const useContactForm = () => {
-    const [formData, setFormData] = useState({
-        name: '',
-        email: '',
-        message: '',
-    });
+interface FormErrors {
+  name?: string
+  email?: string
+  subject?: string
+  message?: string
+}
 
-    const [errors, setErrors] = useState({});
-    const [isSubmitting, setIsSubmitting] = useState(false);
-    const [successMessage, setSuccessMessage] = useState('');
-    const [errorMessage, setErrorMessage] = useState('');
+interface UseContactFormReturn {
+  formData: ContactFormData
+  errors: FormErrors
+  isSubmitting: boolean
+  successMessage: string
+  errorMessage: string
+  handleChange: (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void
+  handleSubmit: (e: FormEvent<HTMLFormElement>) => Promise<void>
+  resetForm: () => void
+}
 
-    const handleChange = (e) => {
-        const { name, value } = e.target;
-        setFormData({
-            ...formData,
-            [name]: value,
-        });
-    };
+export function useContactForm(): UseContactFormReturn {
+  const [formData, setFormData] = useState<ContactFormData>({
+    name: '',
+    email: '',
+    subject: '',
+    message: '',
+    phone: '',
+  })
 
-    const validate = () => {
-        let tempErrors = {};
-        if (!formData.name) tempErrors.name = 'Name is required';
-        if (!formData.email) {
-            tempErrors.email = 'Email is required';
-        } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-            tempErrors.email = 'Email is invalid';
-        }
-        if (!formData.message) tempErrors.message = 'Message is required';
-        setErrors(tempErrors);
-        return Object.keys(tempErrors).length === 0;
-    };
+  const [errors, setErrors] = useState<FormErrors>({})
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [successMessage, setSuccessMessage] = useState('')
+  const [errorMessage, setErrorMessage] = useState('')
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        if (validate()) {
-            setIsSubmitting(true);
-            try {
-                const response = await fetch('/api/contact', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify(formData),
-                });
-                if (response.ok) {
-                    setSuccessMessage('Message sent successfully!');
-                    setFormData({ name: '', email: '', message: '' });
-                } else {
-                    throw new Error('Failed to send message');
-                }
-            } catch (error) {
-                setErrorMessage(error.message);
-            } finally {
-                setIsSubmitting(false);
-            }
-        }
-    };
+  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }))
+    // Limpiar errores al escribir
+    if (errors[name as keyof FormErrors]) {
+      setErrors((prev) => ({
+        ...prev,
+        [name]: '',
+      }))
+    }
+  }
 
-    return {
-        formData,
-        errors,
-        isSubmitting,
-        successMessage,
-        errorMessage,
-        handleChange,
-        handleSubmit,
-    };
-};
+  const validate = (): boolean => {
+    const tempErrors: FormErrors = {}
 
-export default useContactForm;
+    if (!formData.name.trim()) {
+      tempErrors.name = 'El nombre es requerido'
+    }
+
+    if (!formData.email.trim()) {
+      tempErrors.email = 'El email es requerido'
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      tempErrors.email = 'El email no es válido'
+    }
+
+    if (!formData.subject.trim()) {
+      tempErrors.subject = 'El asunto es requerido'
+    }
+
+    if (!formData.message.trim()) {
+      tempErrors.message = 'El mensaje es requerido'
+    } else if (formData.message.trim().length < 10) {
+      tempErrors.message = 'El mensaje debe tener al menos 10 caracteres'
+    }
+
+    setErrors(tempErrors)
+    return Object.keys(tempErrors).length === 0
+  }
+
+  const resetForm = () => {
+    setFormData({
+      name: '',
+      email: '',
+      subject: '',
+      message: '',
+      phone: '',
+    })
+    setErrors({})
+    setSuccessMessage('')
+    setErrorMessage('')
+  }
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+
+    if (!validate()) {
+      return
+    }
+
+    setIsSubmitting(true)
+    setSuccessMessage('')
+    setErrorMessage('')
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      })
+
+      if (response.ok) {
+        setSuccessMessage('¡Mensaje enviado exitosamente! Te contactaré pronto.')
+        resetForm()
+      } else {
+        const data = await response.json()
+        throw new Error(data.message || 'Error al enviar el mensaje')
+      }
+    } catch (error) {
+      setErrorMessage(
+        error instanceof Error ? error.message : 'Error al enviar el mensaje'
+      )
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
+
+  return {
+    formData,
+    errors,
+    isSubmitting,
+    successMessage,
+    errorMessage,
+    handleChange,
+    handleSubmit,
+    resetForm,
+  }
+}

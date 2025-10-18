@@ -1,33 +1,38 @@
 {
-  "name": "portfolio-fullstack",
+  "name": "portfolio-flavio-sanchez",
   "version": "1.0.0",
-  "description": "Portfolio personal como desarrollador full stack.",
-  "main": "index.js",
+  "description": "Portfolio Profesional | Analista de Datos & Desarrollador Full Stack | Departamento de Inteligencia Criminal - Tucumán",
+  "main": "server/src/index.ts",
   "scripts": {
-    "start": "node server/src/index.js",
-    "dev": "concurrently \"npm run client\" \"npm run server\"",
-    "client": "npm start --prefix client",
-    "server": "ts-node server/src/index.ts",
-    "build": "npm run build --prefix client",
-    "test": "jest"
+    "dev": "concurrently \"npm run dev --prefix client\" \"npm run dev --prefix server\"",
+    "dev:client": "npm run dev --prefix client",
+    "dev:server": "npm run dev --prefix server",
+    "build": "npm run build --prefix client && npm run build --prefix server",
+    "start": "npm start --prefix server",
+    "test": "npm test --prefix client && npm test --prefix server",
+    "lint": "npm run lint --prefix client && npm run lint --prefix server"
   },
   "keywords": [
     "portfolio",
     "fullstack",
     "react",
+    "typescript",
     "node",
-    "typescript"
+    "express",
+    "analista de datos",
+    "inteligencia criminal"
   ],
-  "author": "Tu Nombre",
+  "author": "Flavio Sánchez | Policía Provincial Tucumán",
   "license": "MIT",
   "dependencies": {
-    "concurrently": "^6.0.0",
-    "express": "^4.17.1",
-    "typescript": "^4.0.0"
+    "concurrently": "^8.2.2",
+    "express": "^4.18.2",
+    "typescript": "^5.2.2"
   },
   "devDependencies": {
-    "jest": "^26.0.0",
-    "ts-jest": "^26.0.0",
-    "ts-node": "^9.0.0"
+    "@types/node": "^20.5.0",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.1",
+    "ts-node": "^10.9.1"
   }
 }
