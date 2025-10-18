@@ -1,0 +1,36 @@
+{
+  "name": "portfolio-fullstack-server",
+  "version": "1.0.0",
+  "description": "Servidor para el portfolio de un desarrollador full stack.",
+  "main": "src/index.ts",
+  "scripts": {
+    "start": "ts-node src/index.ts",
+    "dev": "ts-node-dev src/index.ts",
+    "build": "tsc",
+    "test": "jest"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemailer": "^6.4.11",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.4.4",
+    "ts-node": "^10.4.0",
+    "ts-node-dev": "^1.1.8",
+    "jest": "^27.0.6",
+    "@types/jest": "^27.0.2",
+    "@types/express": "^4.17.13",
+    "@types/cors": "^2.8.12",
+    "@types/node": "^16.11.7"
+  },
+  "keywords": [
+    "portfolio",
+    "fullstack",
+    "typescript",
+    "express"
+  ],
+  "author": "Tu Nombre",
+  "license": "MIT"
+}

@@ -1,0 +1,33 @@
+{
+  "name": "portfolio-fullstack",
+  "version": "1.0.0",
+  "description": "Portfolio personal como desarrollador full stack.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server/src/index.js",
+    "dev": "concurrently \"npm run client\" \"npm run server\"",
+    "client": "npm start --prefix client",
+    "server": "ts-node server/src/index.ts",
+    "build": "npm run build --prefix client",
+    "test": "jest"
+  },
+  "keywords": [
+    "portfolio",
+    "fullstack",
+    "react",
+    "node",
+    "typescript"
+  ],
+  "author": "Tu Nombre",
+  "license": "MIT",
+  "dependencies": {
+    "concurrently": "^6.0.0",
+    "express": "^4.17.1",
+    "typescript": "^4.0.0"
+  },
+  "devDependencies": {
+    "jest": "^26.0.0",
+    "ts-jest": "^26.0.0",
+    "ts-node": "^9.0.0"
+  }
+}
