@@ -1,17 +1,17 @@
-import { useState } from 'react'
-import { Link } from 'react-router-dom'
-import { Menu, X, Shield } from 'lucide-react'
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { Menu, X, Shield } from 'lucide-react';
 
 export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
 
-  const toggleMenu = () => setIsOpen(!isOpen)
+  const toggleMenu = () => setIsOpen(!isOpen);
 
   const navLinks = [
     { href: '/', label: 'Inicio' },
     { href: '/about', label: 'Acerca de' },
     { href: '/projects', label: 'Proyectos' },
-  ]
+  ];
 
   return (
     <nav className="bg-gradient-to-r from-police-darker via-police-dark to-police-darker border-b border-police-blue border-opacity-20 sticky top-0 z-50 backdrop-blur-lg">
@@ -34,7 +34,7 @@ export default function Navbar() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-1">
-            {navLinks.map((link) => (
+            {navLinks.map(link => (
               <Link
                 key={link.href}
                 to={link.href}
@@ -68,7 +68,7 @@ export default function Navbar() {
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="md:hidden pb-4 space-y-2 border-t border-police-blue border-opacity-20">
-            {navLinks.map((link) => (
+            {navLinks.map(link => (
               <Link
                 key={link.href}
                 to={link.href}
@@ -89,5 +89,5 @@ export default function Navbar() {
         )}
       </div>
     </nav>
-  )
+  );
 }

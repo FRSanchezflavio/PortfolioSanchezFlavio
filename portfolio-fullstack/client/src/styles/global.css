@@ -37,7 +37,12 @@ body {
 
 /* ========== TIPOGRAFÍA ========== */
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: 700;
   letter-spacing: 0.5px;
   margin-bottom: 0.5rem;
@@ -104,7 +109,11 @@ a:hover {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, var(--color-police-blue) 0%, var(--color-shield-blue) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--color-police-blue) 0%,
+    var(--color-shield-blue) 100%
+  );
   color: white;
   box-shadow: 0 4px 15px rgba(30, 64, 175, 0.4);
 }
@@ -115,7 +124,11 @@ a:hover {
 }
 
 .btn-accent {
-  background: linear-gradient(135deg, var(--color-police-accent) 0%, #b91c1c 100%);
+  background: linear-gradient(
+    135deg,
+    var(--color-police-accent) 0%,
+    #b91c1c 100%
+  );
   color: white;
   box-shadow: 0 4px 15px rgba(220, 38, 38, 0.4);
 }
@@ -139,7 +152,11 @@ a:hover {
 /* ========== TARJETAS ========== */
 
 .card {
-  background: linear-gradient(135deg, rgba(30, 64, 175, 0.1) 0%, rgba(3, 105, 161, 0.05) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(30, 64, 175, 0.1) 0%,
+    rgba(3, 105, 161, 0.05) 100%
+  );
   border: 1px solid rgba(217, 119, 6, 0.2);
   border-radius: 0.75rem;
   padding: 1.5rem;
@@ -172,7 +189,12 @@ a:hover {
 .divider {
   width: 100%;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(217, 119, 6, 0.3), transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(217, 119, 6, 0.3),
+    transparent
+  );
   margin: 2rem 0;
 }
 
@@ -199,7 +221,8 @@ a:hover {
 }
 
 @keyframes pulse-slow {
-  0%, 100% {
+  0%,
+  100% {
     opacity: 1;
   }
   50% {
@@ -240,11 +263,11 @@ a:hover {
   h1 {
     font-size: 1.75rem;
   }
-  
+
   h2 {
     font-size: 1.5rem;
   }
-  
+
   .container {
     padding: 0 0.75rem;
   }
@@ -254,11 +277,11 @@ a:hover {
   h1 {
     font-size: 1.5rem;
   }
-  
+
   h2 {
     font-size: 1.25rem;
   }
-  
+
   .btn {
     padding: 0.6rem 1.2rem;
     font-size: 0.9rem;
@@ -272,7 +295,7 @@ a:hover {
     background-color: white;
     color: black;
   }
-  
+
   .no-print {
     display: none;
   }

@@ -266,51 +266,60 @@ npx prisma studio
 ### Componentes Creados y Explicación
 
 #### 1. **Navbar.tsx** - Navegación Principal
+
 - Menú principal con logo profesional
 - Responsive con menú móvil
 - Enlaces a todas las secciones
 - Botón de contacto destacado
 
 **Estilos Policiales:**
+
 - Fondo azul marino oscuro (`police-dark`)
 - Accents en oro (`police-gold`)
 - Efectos hover suaves
 
 #### 2. **HeroSection.tsx** - Sección Principal
+
 - Hero con presentación personal
 - Estadísticas destacadas
 - Cards flotantes con especialidades
 - Animaciones suaves
 
 **Características:**
+
 - Gradient background profesional
 - Scroll indicator
 - Botones de CTA
 
 #### 3. **ProjectCard.tsx** - Tarjeta de Proyectos
+
 - Imagen del proyecto con hover zoom
 - Tecnologías usadas
 - Badges de categoría y destacado
 - Links a demo y repositorio
 
 **Información Mostrada:**
+
 - Título y descripción
 - Stack tecnológico
 - Impacto del proyecto
 - Enlaces directos
 
 #### 4. **ContactForm.tsx** - Formulario de Contacto
+
 - Validación de datos en cliente
 - Envío a API backend
 - Mensajes de éxito/error
 - Información de contacto
 
 **Campos:**
+
 - Nombre, Email, Asunto, Mensaje
 - Información de contacto directo
 - Respuesta rápida
 
 #### 5. **Footer.tsx** - Pie de Página
+
 - Links rápidos
 - Redes sociales
 - Stack tecnológico
@@ -319,6 +328,7 @@ npx prisma studio
 ### Páginas Creadas
 
 #### 1. **Home.tsx**
+
 - Integración de HeroSection
 - Sección de habilidades
 - Proyectos destacados
@@ -326,12 +336,14 @@ npx prisma studio
 - ContactForm
 
 #### 2. **Projects.tsx**
+
 - Galería completa de proyectos
 - Filtrado por categoría
 - Grid responsivo
 - CTA final
 
 #### 3. **About.tsx**
+
 - Información personal
 - Timeline de experiencia
 - Habilidades por categoría
@@ -605,7 +617,7 @@ export default memo(ProjectCard)
 ✅ Base de datos relacional  
 ✅ Formularios con validación  
 ✅ Diseño profesional policial  
-✅ Código bien estructurado  
+✅ Código bien estructurado
 
 **Próximo paso:** Personaliza el contenido con tus proyectos reales y ¡comparte tu portfolio!
 

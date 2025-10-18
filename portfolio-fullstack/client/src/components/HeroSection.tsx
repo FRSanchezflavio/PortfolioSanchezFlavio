@@ -1,5 +1,5 @@
-import { ArrowRight, Download, Code2, BarChart3 } from 'lucide-react'
-import { Link } from 'react-router-dom'
+import { ArrowRight, Download, Code2, BarChart3 } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export default function HeroSection() {
   return (
@@ -7,7 +7,10 @@ export default function HeroSection() {
       {/* Fondo decorativo */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 left-10 w-72 h-72 bg-police-blue rounded-full mix-blend-multiply filter blur-3xl animate-pulse-slow"></div>
-        <div className="absolute -bottom-8 right-10 w-72 h-72 bg-police-accent rounded-full mix-blend-multiply filter blur-3xl animate-pulse-slow" style={{ animationDelay: '2s' }}></div>
+        <div
+          className="absolute -bottom-8 right-10 w-72 h-72 bg-police-accent rounded-full mix-blend-multiply filter blur-3xl animate-pulse-slow"
+          style={{ animationDelay: '2s' }}
+        ></div>
       </div>
 
       {/* Contenido */}
@@ -39,9 +42,10 @@ export default function HeroSection() {
 
             {/* Descripción */}
             <p className="text-lg text-police-light opacity-70 leading-relaxed max-w-lg">
-              Oficial de Policía del Departamento de Inteligencia Criminal - Tucumán.
-              Especializado en el desarrollo de soluciones tecnológicas para análisis
-              criminal intelligence y aplicaciones web modernas con React y Node.js.
+              Oficial de Policía del Departamento de Inteligencia Criminal -
+              Tucumán. Especializado en el desarrollo de soluciones tecnológicas
+              para análisis criminal intelligence y aplicaciones web modernas
+              con React y Node.js.
             </p>
 
             {/* Botones */}
@@ -72,15 +76,21 @@ export default function HeroSection() {
             <div className="grid grid-cols-3 gap-4 pt-8 border-t border-police-blue border-opacity-20">
               <div>
                 <div className="text-3xl font-bold text-police-gold">5+</div>
-                <p className="text-sm text-police-light opacity-60">Años Experiencia</p>
+                <p className="text-sm text-police-light opacity-60">
+                  Años Experiencia
+                </p>
               </div>
               <div>
                 <div className="text-3xl font-bold text-police-gold">20+</div>
-                <p className="text-sm text-police-light opacity-60">Proyectos</p>
+                <p className="text-sm text-police-light opacity-60">
+                  Proyectos
+                </p>
               </div>
               <div>
                 <div className="text-3xl font-bold text-police-gold">100%</div>
-                <p className="text-sm text-police-light opacity-60">Dedicación</p>
+                <p className="text-sm text-police-light opacity-60">
+                  Dedicación
+                </p>
               </div>
             </div>
           </div>
@@ -105,12 +115,8 @@ export default function HeroSection() {
               <div className="absolute -top-8 -right-8 w-40 h-32 bg-gradient-to-br from-police-accent to-red-700 rounded-xl border border-police-gold border-opacity-30 shadow-lg flex items-center justify-center transform hover:scale-110 transition-transform duration-300">
                 <div className="text-center">
                   <BarChart3 className="w-8 h-8 text-white mx-auto mb-2" />
-                  <p className="text-white text-xs font-bold uppercase">
-                    Data
-                  </p>
-                  <p className="text-white text-xs opacity-75">
-                    Analysis
-                  </p>
+                  <p className="text-white text-xs font-bold uppercase">Data</p>
+                  <p className="text-white text-xs opacity-75">Analysis</p>
                 </div>
               </div>
 
@@ -121,9 +127,7 @@ export default function HeroSection() {
                   <p className="text-police-gold text-xs font-bold uppercase">
                     React &
                   </p>
-                  <p className="text-police-gold text-xs">
-                    Node.js
-                  </p>
+                  <p className="text-police-gold text-xs">Node.js</p>
                 </div>
               </div>
             </div>
@@ -143,5 +147,5 @@ export default function HeroSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }

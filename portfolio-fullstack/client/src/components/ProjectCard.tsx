@@ -1,8 +1,8 @@
-import { ExternalLink, Github } from 'lucide-react'
-import type { Project } from '../types'
+import { ExternalLink, Github } from 'lucide-react';
+import type { Project } from '../types';
 
 interface ProjectCardProps {
-  project: Project
+  project: Project;
 }
 
 export default function ProjectCard({ project }: ProjectCardProps) {
@@ -15,7 +15,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
     Express: 'bg-yellow-600 bg-opacity-20 text-yellow-300',
     'Tailwind CSS': 'bg-cyan-500 bg-opacity-20 text-cyan-300',
     Vite: 'bg-purple-600 bg-opacity-20 text-purple-200',
-  }
+  };
 
   return (
     <div className="group relative h-full bg-gradient-to-br from-police-blue via-shield-blue to-police-dark border border-police-gold border-opacity-20 rounded-lg overflow-hidden hover:border-opacity-50 transition-all duration-300 hover:shadow-lg hover:shadow-police-gold/20 flex flex-col">
@@ -65,7 +65,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
 
         {/* Tecnologías */}
         <div className="flex flex-wrap gap-2 mb-4">
-          {project.technologies.slice(0, 3).map((tech) => (
+          {project.technologies.slice(0, 3).map(tech => (
             <span
               key={tech}
               className={`px-2 py-1 text-xs font-semibold rounded uppercase tracking-wider border border-opacity-30 ${
@@ -88,7 +88,9 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           <p className="text-xs text-police-light opacity-60 uppercase tracking-wider font-bold mb-1">
             Impacto
           </p>
-          <p className="text-sm text-police-light opacity-75">{project.impact}</p>
+          <p className="text-sm text-police-light opacity-75">
+            {project.impact}
+          </p>
         </div>
 
         {/* Botones */}
@@ -117,5 +119,5 @@ export default function ProjectCard({ project }: ProjectCardProps) {
       {/* Línea decorativa inferior */}
       <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-police-gold to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
     </div>
-  )
+  );
 }

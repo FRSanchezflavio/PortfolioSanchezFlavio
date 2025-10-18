@@ -1,7 +1,7 @@
-import { Github, Linkedin, Mail, Phone } from 'lucide-react'
+import { Github, Linkedin, Mail, Phone } from 'lucide-react';
 
 export default function Footer() {
-  const currentYear = new Date().getFullYear()
+  const currentYear = new Date().getFullYear();
 
   const socialLinks = [
     {
@@ -24,7 +24,7 @@ export default function Footer() {
       href: 'tel:+54381XXXXXXX',
       label: 'Teléfono',
     },
-  ]
+  ];
 
   return (
     <footer className="bg-gradient-to-t from-police-darker via-police-dark to-transparent border-t border-police-blue border-opacity-20">
@@ -37,7 +37,8 @@ export default function Footer() {
               Flavio Sánchez
             </h3>
             <p className="text-police-light text-sm opacity-75 leading-relaxed">
-              Desarrollador Full Stack & Analista de Datos<br />
+              Desarrollador Full Stack & Analista de Datos
+              <br />
               <span className="text-police-gold text-xs">
                 Departamento de Inteligencia Criminal - Tucumán
               </span>
@@ -50,7 +51,7 @@ export default function Footer() {
               Navegación
             </h4>
             <ul className="space-y-2">
-              {['Inicio', 'Acerca de', 'Proyectos'].map((item) => (
+              {['Inicio', 'Acerca de', 'Proyectos'].map(item => (
                 <li key={item}>
                   <a
                     href={`#${item.toLowerCase()}`}
@@ -69,7 +70,7 @@ export default function Footer() {
               Stack
             </h4>
             <div className="flex flex-wrap gap-2">
-              {['React', 'TypeScript', 'Node.js', 'Prisma'].map((tech) => (
+              {['React', 'TypeScript', 'Node.js', 'Prisma'].map(tech => (
                 <span
                   key={tech}
                   className="px-2 py-1 bg-police-blue bg-opacity-20 text-police-gold text-xs rounded border border-police-blue border-opacity-30"
@@ -86,8 +87,8 @@ export default function Footer() {
               Conecta
             </h4>
             <div className="flex gap-3">
-              {socialLinks.map((link) => {
-                const Icon = link.icon
+              {socialLinks.map(link => {
+                const Icon = link.icon;
                 return (
                   <a
                     key={link.label}
@@ -99,7 +100,7 @@ export default function Footer() {
                   >
                     <Icon className="w-5 h-5 group-hover:text-white" />
                   </a>
-                )
+                );
               })}
             </div>
           </div>
@@ -113,13 +114,22 @@ export default function Footer() {
               © {currentYear} Flavio Sánchez. Todos los derechos reservados.
             </p>
             <div className="flex gap-4">
-              <a href="#privacy" className="hover:text-police-gold transition-colors">
+              <a
+                href="#privacy"
+                className="hover:text-police-gold transition-colors"
+              >
                 Privacidad
               </a>
-              <a href="#terms" className="hover:text-police-gold transition-colors">
+              <a
+                href="#terms"
+                className="hover:text-police-gold transition-colors"
+              >
                 Términos
               </a>
-              <a href="#contact" className="hover:text-police-gold transition-colors">
+              <a
+                href="#contact"
+                className="hover:text-police-gold transition-colors"
+              >
                 Contacto
               </a>
             </div>
@@ -135,5 +145,5 @@ export default function Footer() {
         </div>
       </div>
     </footer>
-  )
+  );
 }

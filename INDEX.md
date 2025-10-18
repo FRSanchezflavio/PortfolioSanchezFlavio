@@ -5,10 +5,12 @@
 ### Si es tu PRIMER DÍA con el proyecto:
 
 1. **Lee esto primero:** [RESUMEN_EJECUTIVO.md](./RESUMEN_EJECUTIVO.md) ⭐
+
    - Entenderás qué está hecho y qué falta
    - Tiempo: 5 minutos
 
 2. **Luego sigue:** [GUIA_COMPLETA.md](./GUIA_COMPLETA.md) 📖
+
    - Paso a paso detallado para instalación
    - Tiempo: 30 minutos
 
@@ -22,18 +24,18 @@
 
 ### 📋 Documentación Principal
 
-| Archivo | Descripción | Tiempo |
-|---------|-------------|--------|
-| **[RESUMEN_EJECUTIVO.md](./RESUMEN_EJECUTIVO.md)** | Estado actual del proyecto, qué está hecho, tareas pendientes | 5 min |
-| **[GUIA_COMPLETA.md](./GUIA_COMPLETA.md)** | Guía paso a paso para instalar y configurar todo | 30 min |
-| **[INSTALACION.md](./INSTALACION.md)** | Pasos rápidos de instalación | 5 min |
-| **[README.md](./README.md)** | Descripción general del proyecto | 10 min |
+| Archivo                                            | Descripción                                                   | Tiempo |
+| -------------------------------------------------- | ------------------------------------------------------------- | ------ |
+| **[RESUMEN_EJECUTIVO.md](./RESUMEN_EJECUTIVO.md)** | Estado actual del proyecto, qué está hecho, tareas pendientes | 5 min  |
+| **[GUIA_COMPLETA.md](./GUIA_COMPLETA.md)**         | Guía paso a paso para instalar y configurar todo              | 30 min |
+| **[INSTALACION.md](./INSTALACION.md)**             | Pasos rápidos de instalación                                  | 5 min  |
+| **[README.md](./README.md)**                       | Descripción general del proyecto                              | 10 min |
 
 ### 💻 Documentación del Código
 
-| Archivo | Descripción |
-|---------|-------------|
-| **[portfolio-fullstack/README.md](./portfolio-fullstack/README.md)** | Estructura del proyecto |
+| Archivo                                                                            | Descripción                |
+| ---------------------------------------------------------------------------------- | -------------------------- |
+| **[portfolio-fullstack/README.md](./portfolio-fullstack/README.md)**               | Estructura del proyecto    |
 | **[portfolio-fullstack/client/README.md](./portfolio-fullstack/client/README.md)** | Documentación del frontend |
 
 ---
@@ -98,7 +100,7 @@ Componentes disponibles:
 
 ```
 Documentación: portfolio-fullstack/client/README.md → Sección "Diseño Profesional"
-Ubicación: 
+Ubicación:
 - Tailwind config: portfolio-fullstack/client/tailwind.config.js
 - Estilos globales: portfolio-fullstack/client/src/styles/global.css
 
@@ -229,6 +231,7 @@ portfolio-fullstack/
 ## 📚 RECURSOS EXTERNOS
 
 ### Documentación Oficial
+
 - [React Documentation](https://react.dev)
 - [TypeScript Handbook](https://www.typescriptlang.org/docs/)
 - [Express.js Guide](https://expressjs.com)
@@ -238,11 +241,13 @@ portfolio-fullstack/
 - [React Router](https://reactrouter.com)
 
 ### Tutoriales Útiles
+
 - [Modern JavaScript](https://javascript.info/)
 - [CSS Tricks](https://css-tricks.com/)
 - [Dev.to Articles](https://dev.to)
 
 ### Herramientas
+
 - [VS Code](https://code.visualstudio.com/)
 - [Postman API Client](https://www.postman.com/)
 - [DBeaver Database Tool](https://dbeaver.io/)
@@ -254,13 +259,13 @@ portfolio-fullstack/
 
 ### Errores Comunes
 
-| Error | Solución |
-|-------|----------|
-| `Module not found` | `npm install` o `rm -rf node_modules && npm install` |
-| `Port 3000/5173 in use` | Ver GUIA_COMPLETA.md → Troubleshooting |
-| `Database connection error` | Revisar DATABASE_URL en .env |
-| `CORS error` | Verificar server CORS config |
-| `Type errors` | Ejecutar `npm run type-check` |
+| Error                       | Solución                                             |
+| --------------------------- | ---------------------------------------------------- |
+| `Module not found`          | `npm install` o `rm -rf node_modules && npm install` |
+| `Port 3000/5173 in use`     | Ver GUIA_COMPLETA.md → Troubleshooting               |
+| `Database connection error` | Revisar DATABASE_URL en .env                         |
+| `CORS error`                | Verificar server CORS config                         |
+| `Type errors`               | Ejecutar `npm run type-check`                        |
 
 ### Comandos Útiles
 
@@ -286,6 +291,7 @@ npm run lint
 ## 🎯 Próximos Pasos
 
 ### Hoy (2-3 horas)
+
 1. Lee RESUMEN_EJECUTIVO.md
 2. Lee GUIA_COMPLETA.md
 3. Instala dependencias
@@ -293,12 +299,14 @@ npm run lint
 5. Abre http://localhost:5173
 
 ### Mañana (3-4 horas)
+
 1. Configura base de datos
 2. Completa backend API
 3. Conecta frontend con backend
 4. Testea formulario de contacto
 
 ### Esta semana (5-8 horas)
+
 1. Agregar tests unitarios
 2. Personalizar contenido (proyectos reales)
 3. Configurar deployment
@@ -309,10 +317,12 @@ npm run lint
 ## 💬 Contacto y Soporte
 
 **¿Tienes preguntas?**
+
 - 📧 Abre un issue en GitHub
 - 📞 Contacta directamente
 
 **¿Encontraste un bug?**
+
 - 🐛 Reporta en GitHub Issues
 - 🔧 Proporciona stack trace completo
 

@@ -1,8 +1,8 @@
-import HeroSection from '../components/HeroSection'
-import ProjectCard from '../components/ProjectCard'
-import ContactForm from '../components/ContactForm'
-import { Code2, BarChart3, Shield } from 'lucide-react'
-import type { Project } from '../types'
+import HeroSection from '../components/HeroSection';
+import ProjectCard from '../components/ProjectCard';
+import ContactForm from '../components/ContactForm';
+import { Code2, BarChart3, Shield } from 'lucide-react';
+import type { Project } from '../types';
 
 export default function Home() {
   // Proyectos destacados
@@ -10,7 +10,8 @@ export default function Home() {
     {
       id: '1',
       title: 'Sistema de Análisis Criminal',
-      shortDescription: 'Plataforma integrada para análisis de redes delictivas',
+      shortDescription:
+        'Plataforma integrada para análisis de redes delictivas',
       description:
         'Plataforma web para el análisis de redes delictivas con visualización de grafos, análisis de patrones y generación de reportes automáticos.',
       imageUrl: 'https://via.placeholder.com/400x300?text=Criminal+Analysis',
@@ -29,7 +30,8 @@ export default function Home() {
       shortDescription: 'Panel de control con métricas en tiempo real',
       description:
         'Dashboard interactivo con métricas, indicadores y alertas en tiempo real para operaciones de inteligencia criminal.',
-      imageUrl: 'https://via.placeholder.com/400x300?text=Intelligence+Dashboard',
+      imageUrl:
+        'https://via.placeholder.com/400x300?text=Intelligence+Dashboard',
       liveUrl: 'https://ejemplo.com',
       repositoryUrl: 'https://github.com/FRSanchezflavio',
       technologies: ['React', 'Vite', 'Tailwind CSS', 'Charts.js'],
@@ -53,7 +55,7 @@ export default function Home() {
       startDate: '2023-01-01',
       impact: '1M+ requests mensuales procesados',
     },
-  ]
+  ];
 
   // Habilidades principales
   const skills = [
@@ -75,7 +77,7 @@ export default function Home() {
       description: 'Autenticación, Encriptación, CORS',
       color: 'from-red-500 to-orange-500',
     },
-  ]
+  ];
 
   return (
     <div>
@@ -90,14 +92,14 @@ export default function Home() {
               Mis <span className="text-police-gold">Habilidades</span>
             </h2>
             <p className="text-lg text-police-light opacity-70 max-w-2xl mx-auto">
-              Especializado en desarrollo full stack con enfoque en análisis de datos e
-              inteligencia criminal.
+              Especializado en desarrollo full stack con enfoque en análisis de
+              datos e inteligencia criminal.
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             {skills.map((skill, index) => {
-              const Icon = skill.icon
+              const Icon = skill.icon;
               return (
                 <div
                   key={index}
@@ -111,9 +113,11 @@ export default function Home() {
                   <h3 className="text-xl font-bold text-police-light mb-2">
                     {skill.title}
                   </h3>
-                  <p className="text-police-light opacity-70">{skill.description}</p>
+                  <p className="text-police-light opacity-70">
+                    {skill.description}
+                  </p>
                 </div>
-              )
+              );
             })}
           </div>
         </div>
@@ -127,12 +131,13 @@ export default function Home() {
               Proyectos <span className="text-police-gold">Destacados</span>
             </h2>
             <p className="text-lg text-police-light opacity-70 max-w-2xl mx-auto">
-              Aquí puedes ver mis trabajos más relevantes y logros profesionales.
+              Aquí puedes ver mis trabajos más relevantes y logros
+              profesionales.
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            {featuredProjects.slice(0, 3).map((project) => (
+            {featuredProjects.slice(0, 3).map(project => (
               <ProjectCard key={project.id} project={project} />
             ))}
           </div>
@@ -172,5 +177,5 @@ export default function Home() {
       {/* Contact Form */}
       <ContactForm />
     </div>
-  )
+  );
 }

@@ -109,24 +109,28 @@ npm run lint
 ### Componentes Principales
 
 #### Navbar
+
 - Logo con escudo policial
 - Menú responsive
 - Links a todas las secciones
 - Botón de contacto
 
 #### HeroSection
+
 - Presentación personal
 - Estadísticas destacadas
 - Cards flotantes
 - Scroll indicator
 
 #### ProjectCard
+
 - Imagen con hover
 - Tecnologías usadas
 - Badges de categoría
 - Links de acción
 
 #### ContactForm
+
 - Validación en cliente
 - Campos requeridos
 - Mensajes de estado

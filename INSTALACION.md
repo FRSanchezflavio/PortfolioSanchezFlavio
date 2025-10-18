@@ -25,11 +25,13 @@ npm install
 ## ✅ PASO 2: CONFIGURAR VARIABLES DE ENTORNO
 
 ### Cliente (client/.env.local)
+
 ```env
 VITE_API_URL=http://localhost:3000/api
 ```
 
 ### Servidor (server/.env)
+
 ```env
 NODE_ENV=development
 PORT=3000
@@ -46,6 +48,7 @@ JWT_SECRET=tu-secreto-jwt-super-seguro
 ## ✅ PASO 3: CREAR COMPONENTES FALTANTES
 
 Se proporcionarán los archivos de los componentes aún no creados:
+
 - ProjectCard.tsx
 - Home.tsx
 - Projects.tsx
@@ -62,6 +65,7 @@ npm run dev
 ```
 
 Esto iniciará:
+
 - Frontend: http://localhost:5173
 - Backend: http://localhost:3000
 

@@ -1,29 +1,26 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
       colors: {
         // Colores profesionales policiales
-        'police-dark': '#0f172a',      // Azul marino oscuro (fondo principal)
-        'police-darker': '#020617',    // Negro azulado muy oscuro
-        'police-blue': '#1e40af',      // Azul profesional
-        'police-light': '#f8fafc',     // Blanco azulado (para texto)
-        'police-accent': '#dc2626',    // Rojo policial (accents)
-        'police-gold': '#d97706',      // Oro para detalles premium
-        'shield-blue': '#0369a1',      // Azul escudo
-        'badge-gold': '#fbbf24',       // Dorado para badges
+        'police-dark': '#0f172a', // Azul marino oscuro (fondo principal)
+        'police-darker': '#020617', // Negro azulado muy oscuro
+        'police-blue': '#1e40af', // Azul profesional
+        'police-light': '#f8fafc', // Blanco azulado (para texto)
+        'police-accent': '#dc2626', // Rojo policial (accents)
+        'police-gold': '#d97706', // Oro para detalles premium
+        'shield-blue': '#0369a1', // Azul escudo
+        'badge-gold': '#fbbf24', // Dorado para badges
       },
       fontFamily: {
-        'sans': ['Inter', 'Segoe UI', 'sans-serif'],
-        'mono': ['Fira Code', 'monospace'],
+        sans: ['Inter', 'Segoe UI', 'sans-serif'],
+        mono: ['Fira Code', 'monospace'],
       },
       borderRadius: {
-        'lg': '0.5rem',
-        'xl': '0.75rem',
+        lg: '0.5rem',
+        xl: '0.75rem',
         '2xl': '1rem',
       },
       boxShadow: {
@@ -48,8 +45,5 @@ export default {
       },
     },
   },
-  plugins: [
-    require('@tailwindcss/forms'),
-    require('@tailwindcss/typography'),
-  ],
-}
+  plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography')],
+};

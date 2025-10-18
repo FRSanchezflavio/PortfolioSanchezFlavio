@@ -1,5 +1,5 @@
-import { Mail, Phone, MapPin, Send } from 'lucide-react'
-import { useState } from 'react'
+import { Mail, Phone, MapPin, Send } from 'lucide-react';
+import { useState } from 'react';
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -7,42 +7,42 @@ export default function ContactForm() {
     email: '',
     subject: '',
     message: '',
-  })
-  const [loading, setLoading] = useState(false)
-  const [success, setSuccess] = useState(false)
+  });
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
-    const { name, value } = e.target
-    setFormData((prev) => ({
+    const { name, value } = e.target;
+    setFormData(prev => ({
       ...prev,
       [name]: value,
-    }))
-  }
+    }));
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setLoading(true)
+    e.preventDefault();
+    setLoading(true);
 
     try {
       const response = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
-      })
+      });
 
       if (response.ok) {
-        setSuccess(true)
-        setFormData({ name: '', email: '', subject: '', message: '' })
-        setTimeout(() => setSuccess(false), 5000)
+        setSuccess(true);
+        setFormData({ name: '', email: '', subject: '', message: '' });
+        setTimeout(() => setSuccess(false), 5000);
       }
     } catch (error) {
-      console.error('Error:', error)
+      console.error('Error:', error);
     } finally {
-      setLoading(false)
+      setLoading(false);
     }
-  }
+  };
 
   const contactInfo = [
     {
@@ -63,7 +63,7 @@ export default function ContactForm() {
       value: 'Tucumán, Argentina',
       href: '#',
     },
-  ]
+  ];
 
   return (
     <section id="contact" className="py-20 bg-police-dark">
@@ -74,13 +74,14 @@ export default function ContactForm() {
             Ponte en <span className="text-police-gold">Contacto</span>
           </h2>
           <p className="text-lg text-police-light opacity-70 max-w-2xl mx-auto">
-            Estoy disponible para proyectos y colaboraciones. No dudes en contactarme.
+            Estoy disponible para proyectos y colaboraciones. No dudes en
+            contactarme.
           </p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8 mb-12">
-          {contactInfo.map((info) => {
-            const Icon = info.icon
+          {contactInfo.map(info => {
+            const Icon = info.icon;
             return (
               <a
                 key={info.label}
@@ -95,7 +96,7 @@ export default function ContactForm() {
                 </h3>
                 <p className="text-police-light">{info.value}</p>
               </a>
-            )
+            );
           })}
         </div>
 
@@ -171,7 +172,9 @@ export default function ContactForm() {
                 className="w-full py-3 bg-gradient-police text-police-gold font-bold rounded-lg hover:shadow-lg transition-all duration-300 uppercase tracking-wider text-sm border border-police-gold border-opacity-30 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 group"
               >
                 {loading ? 'Enviando...' : 'Enviar Mensaje'}
-                {!loading && <Send className="w-5 h-5 group-hover:translate-x-1 transition-transform" />}
+                {!loading && (
+                  <Send className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                )}
               </button>
 
               {success && (
@@ -189,9 +192,9 @@ export default function ContactForm() {
                 ¿Preguntas?
               </h3>
               <p className="text-police-light opacity-70 leading-relaxed mb-6">
-                Respondo todos los mensajes dentro de 24-48 horas. Siéntete libre de
-                contactarme para consultas, propuestas de proyectos o simplemente para
-                saludar.
+                Respondo todos los mensajes dentro de 24-48 horas. Siéntete
+                libre de contactarme para consultas, propuestas de proyectos o
+                simplemente para saludar.
               </p>
             </div>
 
@@ -200,19 +203,21 @@ export default function ContactForm() {
                 Respuesta Rápida
               </h4>
               <div className="space-y-3">
-                {['Consultas Técnicas', 'Propuestas de Proyectos', 'Colaboraciones'].map(
-                  (item) => (
-                    <div key={item} className="flex items-center gap-3">
-                      <span className="w-2 h-2 bg-police-gold rounded-full"></span>
-                      <span className="text-police-light opacity-75">{item}</span>
-                    </div>
-                  )
-                )}
+                {[
+                  'Consultas Técnicas',
+                  'Propuestas de Proyectos',
+                  'Colaboraciones',
+                ].map(item => (
+                  <div key={item} className="flex items-center gap-3">
+                    <span className="w-2 h-2 bg-police-gold rounded-full"></span>
+                    <span className="text-police-light opacity-75">{item}</span>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }

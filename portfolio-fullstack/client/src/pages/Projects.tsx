@@ -1,15 +1,16 @@
-import { useState } from 'react'
-import ProjectCard from '../components/ProjectCard'
-import type { Project } from '../types'
+import { useState } from 'react';
+import ProjectCard from '../components/ProjectCard';
+import type { Project } from '../types';
 
 export default function Projects() {
-  const [selectedCategory, setSelectedCategory] = useState<string>('all')
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
 
   const allProjects: Project[] = [
     {
       id: '1',
       title: 'Sistema de Análisis Criminal',
-      shortDescription: 'Plataforma integrada para análisis de redes delictivas',
+      shortDescription:
+        'Plataforma integrada para análisis de redes delictivas',
       description:
         'Plataforma web para el análisis de redes delictivas con visualización de grafos, análisis de patrones y generación de reportes automáticos.',
       imageUrl: 'https://via.placeholder.com/400x300?text=Criminal+Analysis',
@@ -28,7 +29,8 @@ export default function Projects() {
       shortDescription: 'Panel de control con métricas en tiempo real',
       description:
         'Dashboard interactivo con métricas, indicadores y alertas en tiempo real para operaciones de inteligencia criminal.',
-      imageUrl: 'https://via.placeholder.com/400x300?text=Intelligence+Dashboard',
+      imageUrl:
+        'https://via.placeholder.com/400x300?text=Intelligence+Dashboard',
       liveUrl: 'https://ejemplo.com',
       repositoryUrl: 'https://github.com/FRSanchezflavio',
       technologies: ['React', 'Vite', 'Tailwind CSS', 'Charts.js'],
@@ -97,7 +99,7 @@ export default function Projects() {
       startDate: '2024-02-01',
       impact: '99.9% uptime, 1M+ notificaciones/día',
     },
-  ]
+  ];
 
   const categories = [
     { id: 'all', label: 'Todos' },
@@ -105,12 +107,12 @@ export default function Projects() {
     { id: 'web', label: 'Web' },
     { id: 'api', label: 'API' },
     { id: 'database', label: 'Base Datos' },
-  ]
+  ];
 
   const filteredProjects =
     selectedCategory === 'all'
       ? allProjects
-      : allProjects.filter((p) => p.category === selectedCategory)
+      : allProjects.filter(p => p.category === selectedCategory);
 
   return (
     <div>
@@ -121,8 +123,8 @@ export default function Projects() {
             Mis <span className="text-police-gold">Proyectos</span>
           </h1>
           <p className="text-xl text-police-light opacity-80 max-w-2xl mx-auto">
-            Exploración completa de mis trabajos en desarrollo full stack y análisis de
-            datos.
+            Exploración completa de mis trabajos en desarrollo full stack y
+            análisis de datos.
           </p>
         </div>
       </section>
@@ -131,7 +133,7 @@ export default function Projects() {
       <section className="py-12 bg-police-dark border-b border-police-blue border-opacity-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap justify-center gap-4">
-            {categories.map((category) => (
+            {categories.map(category => (
               <button
                 key={category.id}
                 onClick={() => setSelectedCategory(category.id)}
@@ -156,7 +158,7 @@ export default function Projects() {
       <section className="py-20 bg-gradient-to-b from-police-dark to-police-darker">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-3 gap-8">
-            {filteredProjects.map((project) => (
+            {filteredProjects.map(project => (
               <ProjectCard key={project.id} project={project} />
             ))}
           </div>
@@ -178,7 +180,8 @@ export default function Projects() {
             ¿Interesado en trabajar juntos?
           </h2>
           <p className="text-lg text-police-light opacity-70 mb-8 max-w-2xl mx-auto">
-            Estoy disponible para nuevos proyectos y colaboraciones profesionales.
+            Estoy disponible para nuevos proyectos y colaboraciones
+            profesionales.
           </p>
           <a
             href="#contact"
@@ -189,5 +192,5 @@ export default function Projects() {
         </div>
       </section>
     </div>
-  )
+  );
 }

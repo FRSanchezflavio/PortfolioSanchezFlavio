@@ -1,6 +1,7 @@
 # 🛡️ PORTFOLIO PROFESIONAL - FLAVIO SÁNCHEZ
 
 ## Analista de Datos & Desarrollador Full Stack
+
 **Departamento de Inteligencia Criminal | Policía Provincial Tucumán**
 
 ---
@@ -8,6 +9,7 @@
 ## 📋 PERFIL PROFESIONAL
 
 Policía de la Provincia de Tucumán con especialización en:
+
 - **Análisis de Datos** - Procesamiento, visualización e interpretación de datos criminal intelligence
 - **Desarrollo Full Stack** - Aplicaciones web profesionales con tecnologías modernas
 - **Inteligencia Criminal** - Desarrollador de herramientas tecnológicas para investigaciones
@@ -23,18 +25,21 @@ Este portfolio demuestra mis habilidades técnicas en el desarrollo de solucione
 ## 🚀 TECNOLOGÍAS PRINCIPALES
 
 ### Frontend
+
 - **React** con TypeScript
 - **Vite** para build optimizado
 - **Tailwind CSS** para diseño profesional
 - **Responsive Design** para todos los dispositivos
 
 ### Backend
+
 - **Node.js** con Express
 - **TypeScript** para type-safety
 - **Prisma ORM** para manejo de base de datos
 - **PostgreSQL/MySQL** para almacenamiento
 
 ### Herramientas & DevOps
+
 - **Git** para control de versiones
 - **Docker** para containerización (próximo)
 - **CI/CD** con GitHub Actions (próximo)
@@ -72,6 +77,7 @@ portfolio-fullstack/
 ## 🛠️ INSTALACIÓN Y CONFIGURACIÓN
 
 ### Requisitos Previos
+
 - Node.js v18+
 - npm o yarn
 - Git
@@ -79,17 +85,20 @@ portfolio-fullstack/
 ### Pasos de Instalación
 
 1. **Clonar el repositorio**
+
 ```bash
 git clone https://github.com/FRSanchezflavio/PortfolioSanchezFlavio.git
 cd portfolio-fullstack
 ```
 
 2. **Instalar dependencias**
+
 ```bash
 npm install
 ```
 
 3. **Configurar variables de entorno**
+
 ```bash
 # Crear archivo .env en client/
 cp client/.env.example client/.env
@@ -99,6 +108,7 @@ cp server/.env.example server/.env
 ```
 
 4. **Ejecutar en modo desarrollo**
+
 ```bash
 npm run dev
 ```
@@ -108,6 +118,7 @@ npm run dev
 ## 📊 FUNCIONALIDADES PRINCIPALES
 
 ### ✅ Implementadas
+
 - [x] Landing page profesional
 - [x] Sección "Acerca de Mí"
 - [x] Portfolio de proyectos
@@ -116,6 +127,7 @@ npm run dev
 - [x] Diseño responsivo
 
 ### 🔄 En Desarrollo
+
 - [ ] Sistema de autenticación
 - [ ] Panel de administración
 - [ ] Casos de uso reales (análisis de datos)
@@ -127,19 +139,23 @@ npm run dev
 ## 🚀 CÓMO EJECUTAR
 
 ### Desarrollo
+
 ```bash
 npm run dev
 ```
+
 - Frontend: http://localhost:5173
 - Backend: http://localhost:3000
 
 ### Producción
+
 ```bash
 npm run build
 npm start
 ```
 
 ### Tests
+
 ```bash
 npm test
 ```
@@ -149,6 +165,7 @@ npm test
 ## 📝 EJEMPLOS DE PROYECTOS
 
 Este portfolio incluye ejemplos de:
+
 1. **Análisis de Redes Delictivas** - Visualización de datos conectados
 2. **Dashboard de Inteligencia** - Métricas e indicadores en tiempo real
 3. **Sistema de Reportes** - Generación automática de informes
@@ -169,6 +186,7 @@ Este portfolio incluye ejemplos de:
 ## 📚 DOCUMENTACIÓN
 
 Para documentación detallada, consultar:
+
 - [Frontend README](./client/README.md)
 - [Backend README](./server/README.md)
 - [Guía de Contribución](./CONTRIBUTING.md)
@@ -178,6 +196,7 @@ Para documentación detallada, consultar:
 ## 🤝 CONTACTO
 
 **Flavio Sánchez**
+
 - 📧 Email: tu-email@gmail.com
 - 💼 LinkedIn: linkedin.com/in/tu-perfil
 - 🐙 GitHub: github.com/FRSanchezflavio

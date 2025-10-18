@@ -1,4 +1,4 @@
-import { Award, Briefcase, Code, Database, Shield, Users } from 'lucide-react'
+import { Award, Briefcase, Code, Database, Shield, Users } from 'lucide-react';
 
 export default function About() {
   const timeline = [
@@ -10,7 +10,8 @@ export default function About() {
     {
       year: '2020',
       title: 'Departamento de Inteligencia Criminal',
-      description: 'Asignación al Departamento de Inteligencia Criminal de Tucumán',
+      description:
+        'Asignación al Departamento de Inteligencia Criminal de Tucumán',
     },
     {
       year: '2021',
@@ -31,9 +32,10 @@ export default function About() {
     {
       year: '2024',
       title: 'Especialización',
-      description: 'Profundización en architecture de sistemas y machine learning',
+      description:
+        'Profundización en architecture de sistemas y machine learning',
     },
-  ]
+  ];
 
   const skills = [
     {
@@ -71,7 +73,7 @@ export default function About() {
         'Comunicación',
       ],
     },
-  ]
+  ];
 
   return (
     <div>
@@ -84,13 +86,13 @@ export default function About() {
                 Acerca de <span className="text-police-gold">Mí</span>
               </h1>
               <p className="text-xl text-police-light opacity-80 mb-4">
-                Oficial de Policía Provincial Tucumán | Analista de Datos | Desarrollador
-                Full Stack
+                Oficial de Policía Provincial Tucumán | Analista de Datos |
+                Desarrollador Full Stack
               </p>
               <p className="text-lg text-police-light opacity-70 leading-relaxed">
-                Combino mi experiencia policial con habilidades técnicas avanzadas para
-                desarrollar soluciones tecnológicas que mejoren los procesos de
-                inteligencia criminal.
+                Combino mi experiencia policial con habilidades técnicas
+                avanzadas para desarrollar soluciones tecnológicas que mejoren
+                los procesos de inteligencia criminal.
               </p>
             </div>
             <div className="relative">
@@ -120,17 +122,20 @@ export default function About() {
                 Trayectoria Profesional
               </h3>
               <p className="text-police-light opacity-75 mb-4 leading-relaxed">
-                Oficial de la Policía Provincial de Tucumán desde 2019, trabajando en el
-                Departamento de Inteligencia Criminal. Mi rol combina trabajo de campo
-                tradicional con análisis de datos y desarrollo de soluciones tecnológicas.
+                Oficial de la Policía Provincial de Tucumán desde 2019,
+                trabajando en el Departamento de Inteligencia Criminal. Mi rol
+                combina trabajo de campo tradicional con análisis de datos y
+                desarrollo de soluciones tecnológicas.
               </p>
               <p className="text-police-light opacity-75 mb-4 leading-relaxed">
-                Especializado en identificar problemas operacionales y desarrollar
-                aplicaciones web que optimicen procesos de análisis criminal intelligence.
+                Especializado en identificar problemas operacionales y
+                desarrollar aplicaciones web que optimicen procesos de análisis
+                criminal intelligence.
               </p>
               <p className="text-police-light opacity-75 leading-relaxed">
-                Manejo fluido de información sensible, comprensión profunda de seguridad
-                de datos y arquitectura de sistemas escalables para millones de registros.
+                Manejo fluido de información sensible, comprensión profunda de
+                seguridad de datos y arquitectura de sistemas escalables para
+                millones de registros.
               </p>
             </div>
 
@@ -174,7 +179,9 @@ export default function About() {
               {timeline.map((event, index) => (
                 <div
                   key={index}
-                  className={`flex items-center gap-8 ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}
+                  className={`flex items-center gap-8 ${
+                    index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'
+                  }`}
                 >
                   {/* Contenido */}
                   <div className="flex-1">
@@ -185,7 +192,9 @@ export default function About() {
                       <h3 className="text-xl font-bold text-police-light mb-2">
                         {event.title}
                       </h3>
-                      <p className="text-police-light opacity-70">{event.description}</p>
+                      <p className="text-police-light opacity-70">
+                        {event.description}
+                      </p>
                     </div>
                   </div>
 
@@ -212,7 +221,7 @@ export default function About() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {skills.map((skillGroup, index) => {
-              const Icon = skillGroup.icon
+              const Icon = skillGroup.icon;
               return (
                 <div
                   key={index}
@@ -225,7 +234,7 @@ export default function About() {
                     {skillGroup.category}
                   </h3>
                   <div className="flex flex-wrap gap-2">
-                    {skillGroup.skills.map((skill) => (
+                    {skillGroup.skills.map(skill => (
                       <span
                         key={skill}
                         className="px-3 py-1 bg-police-blue bg-opacity-30 text-police-gold text-xs font-bold rounded border border-police-gold border-opacity-20"
@@ -235,7 +244,7 @@ export default function About() {
                     ))}
                   </div>
                 </div>
-              )
+              );
             })}
           </div>
         </div>
@@ -248,7 +257,8 @@ export default function About() {
             ¿Quieres trabajar juntos?
           </h2>
           <p className="text-lg text-police-light opacity-70 mb-8 max-w-2xl mx-auto">
-            Estoy disponible para consultas, proyectos y colaboraciones profesionales.
+            Estoy disponible para consultas, proyectos y colaboraciones
+            profesionales.
           </p>
           <a
             href="#contact"
@@ -259,5 +269,5 @@ export default function About() {
         </div>
       </section>
     </div>
-  )
+  );
 }
