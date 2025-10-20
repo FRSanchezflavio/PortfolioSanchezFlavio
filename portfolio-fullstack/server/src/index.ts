@@ -12,7 +12,7 @@ const PORT = process.env.PORT || 5000;
 
 // Validar variables de entorno críticas
 const requiredEnvVars = ['EMAIL_HOST', 'EMAIL_USER', 'EMAIL_PASS'];
-requiredEnvVars.forEach((envVar) => {
+requiredEnvVars.forEach(envVar => {
   if (!process.env[envVar]) {
     console.warn(`⚠️  Variable de entorno faltante: ${envVar}`);
   }
