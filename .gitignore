@@ -1,0 +1,54 @@
+# Dependencias
+node_modules/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Variables de entorno
+.env
+.env.local
+.env.*.local
+
+# Archivos de construcción
+dist/
+build/
+.next/
+out/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Editor y IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+*.iml
+
+# TypeScript
+*.tsbuildinfo
+.ts-node/
+
+# Prisma
+prisma/migrations/
+
+# Caché de módulos
+.eslintcache
+.stylelintcache
+
+# Temp files
+tmp/
+temp/
+
+# Sistema operativo
+Thumbs.db
+.DS_Store
+
+# nul (errores de Windows)
+nul
